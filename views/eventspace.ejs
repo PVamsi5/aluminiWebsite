@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amrita Alumni</title>
+    <link rel="stylesheet" href="communities.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link href='https://unpkg.com/css.gg@2.0.0/icons/css/menu-right-alt.css' rel='stylesheet'>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+<body>
+   <div class="header">
+    <img src="logo.png" alt="AMRITA ALUMNI" height="100px" width="100px" style="position: relative;margin-left:20px;margin-right: 0px;">
+    <a href="#" class="logo">AMRITA ALUMNI</a>
+    <div class="navigation">
+        <ul class="menu">
+            <div class="close-btn"></div>
+            <li class="menu_item">
+                <a class="sub-btn">About <i class="fas fa-angle-down"></i></a>
+                <ul class="sub-menu">
+                <li class="sub-item"><a href="" >About AAA</a></li>
+                <li class="sub-item"><a href="" >Contact Us</a></li>
+                </ul>
+            </li>
+            <li class="menu_item">
+                <a class="sub-btn">Events<i class="fas fa-angle-down"></i></a>
+                <ul class="sub-menu">
+                    <li class="sub-item"><a href="" >Featured Events</a></li>
+                    <li class="sub-item"><a  href="" >Reunions</a></li>
+                    <li class="sub-item"><a  href="" >Event Space</a></li>
+                </ul>
+            </li>
+            <li class="menu_item">
+                <a class="sub-btn">Programs & Perks <i class="fas fa-angle-down"></i></a>
+            <ul class="sub-menu">
+                <li class="sub-item"><a  href="" >Alumni Perks</a></li>
+                <li class="sub-item"><a  href="" >Alumni Membership</a></li>
+                <li class="sub-item"><a  href="" >AAA Membership Card</a></li>
+            </ul>
+            </li>
+            <li class="menu_item">
+                <a class="sub-btn">Communities <i class="fas fa-angle-down"></i></a>
+                <ul class="sub-menu">
+                    <li class="sub-item"><a  href="" >Clubs & Groups</a></li>
+                    <li class="sub-item"><a  href="" >Young Alumni</a></li>
+                    <li class="sub-item"><a  href="" >Students</a></li>
+                </ul>
+            </li>
+            <li class="menu_item">
+                <a class="sub-btn" >Reading & Resources <i class="fas fa-angle-down"></i></a>
+                <ul class="sub-menu">
+                <li class="sub-item"><a  href="" >Career Connections</a></li>
+                <li class="sub-item"><a   href="https://www.amrita.edu/news-all/" >News & Stories</a></li>
+                <li class="sub-item"><a  href="https://onlineamrita.com/" >Learn</a></li>
+            </ul>
+            </li>  
+        </ul>
+    </div>
+    <div class="menu-btn" ></div>
+  </div>
+  <div class="image-container">
+    <img src="amritapuri-convocation-2022-images-7.png" alt="" >
+    <div class="overlay-text">
+      <h2 style="font-size: 40px;">About Clubs and Groups</h2>
+    </div>
+  </div>
+   
+  <div class="meet">
+    <h1 style="font-size: 60px; padding-top: 60px;font-weight: 150px;">Meet Your Amrita</h1>  
+    <h1  style="font-size: 60px; padding-top: 25px;font-weight: 150px;">Community</h1>
+    <p style="padding-top: 50px;font-size: 25px;text-align: center;">Here you’ll connect with other alumni; professional groups for networking,
+      <br>advice, and opportunities; and shared interest groups hosting a space for
+      <br> discussion, support, and celebration.</p>
+  </div>
+
+  <div class="cover">
+    <div class="box">
+      <img src="https://assets.stanford.edu/i/200x200/smart/filters:quality(60)/f/103430/2700x1013/18b7146e3b/health-and-wellness-kayaking.jpg" alt="">
+      <h2 style="text-align: center;margin-top: 25px;">Interest Groups</h2>
+      <p style="text-align: center;margin-top: 10px;font-weight: 500;">Hobbies. Community service. Student activities. Even the 
+        classifieds. Whatever your focus, there’s likely a group of alums
+         who share your same interest.</p> <br>
+         <a href="" style="color: red;padding: 20px;margin-left: 170px;" class="arrow-link">View interest groups<span class="arrow-icon">➔</span></a>
+    </div>
+    <div class="box1">
+      <img src="https://assets.stanford.edu/i/200x200/smart/filters:quality(60)/f/103430/2700x1013/f134a087bb/career-mid-career.jpg" alt="">
+      <h2 style="text-align: center;margin-top: 25px;">professional Groups</h2>
+      <p style="text-align: center;margin-top: 15px;font-weight: 500;">Connect with others in your industry, get advice from alums or
+         build your network through a professional group.</p> <br> <br>
+         <a href="" style="color: red;padding: 20px;margin-left: 170px;" class="arrow-link">Explore professional groups<span class="arrow-icon">➔</span></a>
+      
+    </div>
+    
+  </div>
+
+
+   <script type="text/javascript">
+    $(document).ready(function(){
+        $(".sub-btn").click(function(){
+            $(this).next(".sub-menu").slideToggle();
+        });
+    });
+    var menu=document.querySelector(".menu");
+    var menuBtn=document.querySelector(".menu-btn");
+    var closeBtn=document.querySelector(".close-btn");
+    menuBtn.addEventListener("click",()=>{
+        menu.classList.add("active");
+    });
+    closeBtn.addEventListener("click",()=>{
+        menu.classList.remove("active");
+    });
+    window.addEventListener("scroll",function(){
+var header=document.querySelector("header")
+header.classList.toggle("sticky",window.scrollY>0);
+    });
+   </script>
+   <br><br>
+   
+   <h1></h1>
+
+   <div class="Explore">
+    <h1 style="font-size: 60px; padding-top: 60px;font-weight: 150px;">Why Host With Us ? </h1>  
+    <p style="padding-top: 50px;font-size: 25px;text-align: center;">Amrita Alumni Groups is the place to find Alumni volunteer-led <br>
+       communities and programs worldwide. Discover alumni communities and <br>
+        start a conversation or look out for upcoming events near where you live or <br>
+       with communities important to you.
+  </div>
+        
+       
+        
+  
+</body>
+
+</html>

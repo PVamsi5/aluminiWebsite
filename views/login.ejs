@@ -1,0 +1,645 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amrita Alumni</title>
+    <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link href='https://unpkg.com/css.gg@2.0.0/icons/css/menu-right-alt.css' rel='stylesheet'>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+*{
+    margin: 0;
+    padding: 0px;
+    box-sizing: border-box;
+    
+    
+    font-family: "Poppins",sans-serif;
+}
+
+.section-home{
+   position:relative;
+   min-height: 100vh;
+   background: url(amritapuri-convocation-2022-images-7.png)no-repeat; 
+   background-size:cover ;
+   background-position:center ;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+.section-home h1{
+  color: #FFF8DE; 
+  font-size:10vw ;
+  font-weight: 800;
+  text-shadow: 0 5px 25px rgb(0 0 0 / 20%);
+  opacity: 0.8; 
+}
+
+
+
+header{
+    z-index: 999;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(103, 18, 18, 0.953);
+    box-shadow: 0 5px 25px rgb(0 0 0 / 20%);
+    padding: 0 100px;
+    transition: 0.6s;
+}
+ .logo {
+color: aliceblue;
+font-family: 'Raleway', sans-serif;
+font-size: 1.8em;
+font-weight: 400;
+text-transform: uppercase;
+text-decoration: none;
+letter-spacing: 2px;
+
+}
+ .navigation{
+  position: relative;
+  line-height: 75px; 
+  transition-property: line-height;
+}
+header.sticky .navigation{
+    line-height: 60px;
+}
+ .navigation .menu{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    user-select:none;
+}
+.menu_item > a{
+   color: aliceblue;
+   font-size: 1em;
+   text-decoration: none;
+   margin: 20px;
+   padding: 25px 0;
+}
+.menu_item>a:hover{
+  color: black;
+  transition: 0.3s;
+}
+.menu_item .sub-menu{
+    position: absolute;
+    background: rgb(100, 20, 20);
+    top:74px;
+   line-height: 40px;
+   list-style: none;
+   border-radius:  0 0 8px 8px;
+   box-shadow: 0 5px 25px rgba(192, 26, 26, 0.2);
+   pointer-events: none;
+   transform: translateY(20px);
+   opacity: 0;
+   transition: 0.3s;
+   transition-property: transform,opacity;
+}
+span {
+    color:black;
+}
+body {
+    background-image:url("amrita2.png");
+    background-repeat:no-repeat;
+    background-size:100%;
+    
+}
+header.sticky .menu_item .sub-menu{
+    top: 60px;
+}
+.menu_item:hover .sub-menu{
+    pointer-events: all;
+    transform: translateY(0);
+    opacity: 1; 
+    
+}
+
+.menu_item .sub-menu .sub-item{
+    position: relative;
+    padding: 7px 0;
+    cursor: pointer;
+    box-shadow: inset 0px -30px 5px -30px rgba(26, 12, 12, 0.251);
+
+}
+
+.menu_item .sub-menu .sub-item a{
+    color: #fff;
+    font-size: 1em;
+    text-decoration: none;
+    padding: 15px 30px;
+  
+}
+.menu_item .sub-menu .sub-item:hover{
+    background: black;
+    
+}
+.menu_item .sub-menu .sub-item:last-child:hover{
+    border-radius:0 0 8px 8px;
+}
+
+.menu-btn{
+    display: none;
+}
+@media (max-width:1060px) {
+    header .navigation .menu{
+        position: fixed;
+        display: block;
+        background: rgb(114, 41, 41);
+        min-width: 350px;
+        height: 100vh;
+        top: 0;
+        right: -100%;
+        padding: 90px 50px;
+        overflow-y: auto;
+        transition: 0.5s;
+        transition-property: right,visiblilty;
+        
+    }
+    header.sticky .navigation{
+        line-height: 75px;
+    }
+    header .navigation .menu.active{
+        right: 0; 
+        visibility: visible;
+    }
+    .menu_item{
+        position: relative;
+    }
+    .menu_item .sub-menu{
+        opacity: 1;
+        position: relative;
+        top: 0;
+        transform: translateX(10px);
+        background: rgba(192, 26, 26, 0.2);
+        border-radius: 5px;
+        overflow: hidden;
+        display: none;
+    }
+    header.sticky .menu_item .sub-menu{
+        top: 0;
+    }
+    .menu_item:hover .sub-menu{
+        transform: translateX(10px); 
+    } 
+    .menu_item .sub-menu .sub-item{
+        box-shadow: none;
+    }
+    .menu_item .sub-menu .sub-item:hover{
+background: none;
+    }
+    .menu_item .sub-menu .sub-item a:hover{
+        color: black;
+        transition: 0.3s;
+    }
+
+.close-btn{
+    position: absolute;
+ background:url(cross-button.png)no-repeat;
+width: 40px;
+height: 40px;
+background-size: 25px;
+background-position: center;
+   top: 0;
+   left: 0;
+   margin: 25px;
+   cursor: pointer;
+}
+.menu-btn{
+    background: url("menu_btn.png")no-repeat;
+    width: 40px;
+    height: 40px;
+    background-size: 70px;
+    background-position: center;
+    cursor: pointer;
+    display: block; 
+
+ }
+ header{
+    padding: 15px 20px;
+ }
+ header.sticky{
+    padding: 10px 20px;
+ }
+}
+.intro h3,p,h1{
+    font-family: "Raleway";
+    line-height: 25px;
+    justify-content: center;
+    align-items: center;
+    display: flex; 
+}
+.box {
+            border:1px solid black;
+            background-color:rgb(196, 192, 192);
+            float:left;
+            width:200%;
+        }
+        .alignment {
+            padding-left:260px;
+            padding-right:260px;
+        }
+        table,td,th{
+            margin:0 auto;
+            height:50px;
+            
+        }
+        input {
+            width:100%;
+            height:20px;
+        }
+        .border {
+        height:1000px;
+        padding:30px;
+        width: 550px;
+        animation:mymove 5s infinite;
+    }
+    @keyframes mymove {
+        from {left: 0px;}
+  to {left: 200px;}
+    }
+.padding {
+    padding-left:100px;
+}
+.aligning {
+    padding-left:65px;
+} 
+input[type=submit] {
+  background-color:rgb(87, 190, 202);
+  width:70%;
+  color:white;
+  border:none;
+  height:35px;
+}
+input[type=submit]:hover {
+  background-color:black;
+  color:white;
+  border:1px solid black;
+} 
+input[type=text] {
+  background-color:rgb(122, 119, 119,0.5)2, 41, 41;
+  border:1px solid black;
+  color:black;
+  width:70%;
+  position:relative;
+  margin-left:5px;
+  border:none;
+  height:35px;
+}
+input[type=email] {
+  background-color:rgb(122, 119, 119,0.5)2, 41, 41;
+  border:1px solid black;
+  color:black;
+  width:70%;
+  position:relative;
+  margin-left:5px;
+  border:none;
+  height:35px;
+}
+input[type=password] {
+  background-color:rgb(122, 119, 119,0.5)2, 41, 41;
+  border:1px solid black;
+  color:black;
+  width:70%;
+  position:relative;
+  margin-left:5px;
+  border:none;
+  height:35px;
+}
+
+
+@keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translateY(-50px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .border {
+            height: 1000px;
+            padding: 30px;
+            width: 550px;
+            animation: slideIn 1s ease-in-out;
+        }
+
+        span[id$="Error"] {
+            opacity: 0;
+            color:red;
+            transition: opacity 0.5s ease-in-out;
+        }
+
+        span[id$="Error"].active {
+            opacity: 1;
+        }
+        @keyframes bounceInNav {
+    from {
+        transform: translateY(-30px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.navigation {
+    position: relative;
+    line-height: 75px;
+    transition-property: line-height;
+    animation: bounceInNav 0.8s ease-out;
+}
+    </style>
+</head>
+<body >
+   <header>
+    <img src="logo.png" alt="AMRITA ALUMNI" height="100px" width="100px" style="position: relative;margin-left:20px;margin-right: 0px;">
+    <a href="home" class="logo">AMRITA ALUMNI</a>
+    <div class="navigation">
+        <ul class="menu">
+            <div class="close-btn"></div>
+            <li class="menu_item">
+                <a class="sub-btn">About <i class="fas fa-angle-down"></i></a>
+                <ul class="sub-menu">
+                <li class="sub-item"><a href="home" >About AAA</a></li>
+                <li class="sub-item"><a href="" >Contact Us</a></li>
+                </ul>
+            </li>
+            <li class="menu_item">
+                <a class="sub-btn">Events<i class="fas fa-angle-down"></i></a>
+                <ul class="sub-menu">
+                    <li class="sub-item"><a href="events" >Featured Events</a></li>
+                    <li class="sub-item"><a  href="" >Reunions</a></li>
+                    <li class="sub-item"><a  href="eventspace" >Event Space</a></li>
+                </ul>
+            </li>
+            <li class="menu_item">
+                <a class="sub-btn">Programs & Perks <i class="fas fa-angle-down"></i></a>
+            <ul class="sub-menu">
+                <li class="sub-item"><a  href="" >Alumni Perks</a></li>
+                <li class="sub-item"><a  href="" >Alumni Membership</a></li>
+                <li class="sub-item"><a  href="" >AAA Membership Card</a></li>
+            </ul>
+            </li>
+            <li class="menu_item">
+                <a class="sub-btn">Communities <i class="fas fa-angle-down"></i></a>
+                <ul class="sub-menu">
+                    <li class="sub-item"><a  href="Clubs" >Clubs & Groups</a></li>
+                    <li class="sub-item"><a  href="youngalumni" >Young Alumni</a></li>
+                    <li class="sub-item"><a  href="" >Students</a></li>
+                </ul>
+            </li>
+            <li class="menu_item">
+                <a class="sub-btn" >Reading & Resources <i class="fas fa-angle-down"></i></a>
+                <ul class="sub-menu">
+                <li class="sub-item"><a  href="" >Career Connections</a></li>
+                <li class="sub-item"><a   href="https://www.amrita.edu/news-all/" >News & Stories</a></li>
+                <li class="sub-item"><a  href="https://onlineamrita.com/" >Learn</a></li>
+            </ul>
+            </li>  
+        </ul>
+    </div>
+    <div class="menu-btn" ></div>
+   </header> 
+
+   
+
+   <script type="text/javascript">
+    $(document).ready(function(){
+        $(".sub-btn").click(function(){
+            $(this).next(".sub-menu").slideToggle();
+        });
+    });
+    var menu=document.querySelector(".menu");
+    var menuBtn=document.querySelector(".menu-btn");
+    var closeBtn=document.querySelector(".close-btn");
+    menuBtn.addEventListener("click",()=>{
+        menu.classList.add("active");
+    });
+    closeBtn.addEventListener("click",()=>{
+        menu.classList.remove("active");
+    });
+    window.addEventListener("scroll",function(){
+var header=document.querySelector("header")
+header.classList.toggle("sticky",window.scrollY>0);
+    });
+
+
+    function formvalidate() {
+    
+
+    var name = document.getElementById('name').value;
+    var password = document.getElementById('pass').value;
+    var email = document.getElementById('email').value;
+
+
+    if (name == "") {
+      
+      alert("ENTER YOUR NAME");
+      return false;
+    }
+    
+    if (email == "") {
+        
+        alert("ENTER YOUR PERSONAL EMAIL ID")
+        return false;
+    }
+
+    if (password == "") {
+    
+    alert("PLEASE ENTER YOUR PASSWORD")
+    return false;
+  }
+  if (password.length<8) {
+    
+    alert("MINIMUM LENGTH OF THE PASSWORD SHOULD BE 8");
+    return false;
+  }
+  var count3=0;
+  for (var i=0;i<password.length;i++) {
+    if (password.charAt(i)>='A' && password.charAt(i)<='Z') {
+      count3++;
+    }
+  }
+  if (count3==0) {
+    
+    alert("PLEASE ADD ATLEAST ONE CAPITAL LETTER");
+    return false;
+  }
+  
+  var count4=0;
+  for (var i=0;i<password.length;i++) {
+    if (password.charAt(i)==' ') {
+      count4++;
+    }
+  }
+  if (count4!=0) {
+    
+    alert("SPACE SHOULD NOT BE THERE");
+    return false;
+  }
+  function lowercase(password) {
+// Regular expressions to check for the required patterns
+
+var lowercaseRegex = /[a-z]/;
+
+if (lowercaseRegex.test(password)) {
+return true; // Password is valid
+} else {
+return false; // Password is invalid
+}
+}
+var lower = lowercase(password);
+
+if (lower) {
+
+} 
+else {
+
+alert("ENTER LOWERCASE CHARACTERS");
+return false;
+}
+function num(password) {
+var numberRegex = /[0-9]/;
+
+
+// Check if the password meets all the criteria
+if (numberRegex.test(password)) {
+return true; // Password is valid
+} else {
+return false; // Password is invalid
+}
+}
+
+var number = num(password);
+
+if (num) {
+
+} 
+else {
+
+alert("ENTER DIGITS IN PASSWORD");
+return false;
+}
+
+function special(password) {
+
+var specialCharRegex = /[!@#$%^&*()_+\-=[\]{};':"\\|,.<>/?]/;
+
+// Check if the password meets all the criteria
+if (specialCharRegex.test(password)) {
+return true; // Password is valid
+} else {
+return false; // Password is invalid
+}
+}
+
+var ch = special(password);
+
+if (!ch) {
+
+alert("ENTER SPECIAL CHARACTERS");
+return false;
+}
+
+    function countdigits(name) {
+var digitcount = 0;
+var digitsRegex = /\d/g;
+
+var matches1 = name.match(digitsRegex);
+if (matches1) {
+digitcount = matches1.length;
+}
+return digitcount;
+}
+/function to count special characters in name/
+function countspecial(name) {
+var specialcount=0;
+var specialcharRegex = /[^A-Za-z0-9\s]/g;
+
+var matches2 = name.match(specialcharRegex);
+if (matches2) {
+specialcount = matches2.length;
+}
+return specialcount;
+}
+var count1 = countdigits(name);
+var count2 = countspecial(name);
+if (count1!=0 || count2!=0) {
+
+alert("INVALID NAME");
+return false;
+}
+
+var count5=0;
+  for (var i=0;i<name.length;i++) {
+    if (name.charAt(i)==' ') {
+      count5++;
+    }
+  }
+  if (count5!=0) {
+    
+    alert("DO NOT LEAVE SPACE IN USERNAME");
+    return false;
+  }
+  var emailRegex = /^[^\s@]+@[^\s@]+\.[a-zA-Z]+$/;
+  
+
+   if (emailRegex.test(email)) {
+
+}
+else {
+document.getElementById("emailError").innerHTML = " INVALID EMAIL";
+return false;
+}
+
+    alert("login successful you can go to next page");
+    return true;
+
+}
+
+
+   </script>
+
+<br><br><br><br>
+    
+<div style="padding-left:0px;padding-right:40px;">
+    
+  <div class="border" style="background-color:whitesmoke;">
+    <form action="home" onsubmit="return formvalidate()">
+        <div class="padding">
+            <br><br><br><br><br>
+            <h1 style="font-size:50px;padding-left:0px;padding-right:100px;"><center>SIGN IN</center></h1>
+            <br><br>
+        <label style="font-size: 24px;"><b>NAME</b></label><span id="nameError" style="color:red;" ></span><br>
+        <input id="name" type="text" style="border:1px solid black;" placeholder="Enter your name" ><br><BR>
+        <label style="font-size: 24px;"><b>EMAIL</b></label><span id="emailError" style="color:red;" ></span><BR>
+        <input id="email" type="email" style="border:1px solid black;" placeholder="Enter your personal email"><br><BR>
+        <label style="font-size: 24px;"><b>PASSWORD</b></label><span id="passError"  ></span><BR>
+        <input id="pass" type="password" style="border:1px solid black;" placeholder="Enter your password"><br><BR>
+        
+  <input type="submit" value="LOGIN">
+    </form>
+        <br>
+        <br>
+        <div class="aligning">
+        
+    </div>
+  </div>
+   
+</body>
+
+</html>

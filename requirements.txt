@@ -1,0 +1,5 @@
+mkdir alumni-student-login
+cd alumni-student-login
+npm init -y
+
+npm install express body-parser ejs
